@@ -12,6 +12,8 @@ Debian 使用 `ssh-telegram-notify_deb.sh` ，Alpine 使用 `ssh-telegram-notify
 cd /usr/local/bin/
 wget https://raw.githubusercontent.com/Zhengyscla/ssh_tg-alert/refs/heads/main/ssh-telegram-notify_deb.sh
 wget https://raw.githubusercontent.com/Zhengyscla/ssh_tg-alert/refs/heads/main/ssh-telegram-notify_alp.sh
+chmod /usr/local/bin/ssh-telegram-notify_deb.sh
+chmod /usr/local/bin/ssh-telegram-notify_alp.sh
 ```
 
 在里面编辑好 Bot Token 和你的 ID
@@ -37,5 +39,5 @@ nano /etc/profile
 最后一行加上：
 
 ```
-[ -n "$SSH_CONNECTION" ] && /usr/local/bin/ssh-telegram-notify.sh
+[ -n "$SSH_CONNECTION" ] && /usr/local/bin/ssh-telegram-notify_alp.sh
 ```
